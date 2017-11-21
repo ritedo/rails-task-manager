@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+<div class="details"><p><%= @task.details %></p></div>
+<% if @task.completed %>
+<p><i class="fa fa-check-square-o" aria-hidden="true"></i> This task is completed</p>
+<% else %>
+<p><i class="fa fa-square-o" aria-hidden="true"></i> This task is not completed</p>
+<% end %>
+<%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i> Edit task'.html_safe, edit_task_path(@task)%>
+<%= link_to '<i class="fa fa-undo" aria-hidden="true"></i> Back to list'.html_safe, tasks_path%>
